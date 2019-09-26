@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script type="text/javascript">
+		var sqr, n1, n2, n3, n4, pr1, pr2, qty1, qty2, bse, hgt;
+		sqr=prompt('Introduce the length of the square');
+		n1=prompt('Introduce the 1st number to sum');
+		n2=prompt('Introduce the 2nd number to sum');
+		n3=prompt('Introduce the 3rd number to sum');
+		n4=prompt('Introduce the 4th number to sum');
+		pr1=prompt('Introduce the price your 1st product');
+		qty1=prompt('Introduce the quantity of the 1st product');
+		pr2=prompt('Introduce the price your 2nd product');
+		qty2=prompt('Introduce the quantity of the 2nd product');
+		bse=prompt('Enter the base of a triangle');
+		hgt=prompt('Enter the height of the triangle');
+
+		var square=parseInt(sqr)*4;
+		var addition=parseInt(n1)+parseInt(n2)+parseInt(n3)+parseInt(n4);
+		var product=parseInt(n1)*parseInt(n2)*parseInt(n3)*parseInt(n4);
+		var shoplist=parseInt(pr1)*parseInt(qty1)+parseInt(pr2)*parseInt(qty2);
+		var area=parseInt(bse)*parseInt(hgt)/2;
+
+		document.write('The perimeter of the square is: ');
+		document.write(square);
+		document.write('<br>');
+		document.write('The addition of the numbers is: ');
+		document.write(addition);
+		document.write('<br>');
+		document.write('The product of the numbers is: ');
+		document.write(product);
+		document.write('<br>');
+		document.write('The bill of your product is: ');
+		document.write(shoplist);
+		document.write('<br>');
+		document.write('The area of the triangle is: ');
+		document.write(area);
+	</script>
+</body>
+</html>
