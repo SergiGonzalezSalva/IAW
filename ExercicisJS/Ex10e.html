@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var c, fail, pass, marks;
+	c=0;
+	fail=0;
+	pass=0;
+	while(c<10) {
+		marks=prompt('Enter a studen mark: ');
+		if (marks>=5) {	
+		//Aquest if el podria fer que la nota maxima fos 10 pero a l'anunciat no posa quin es maxim o minim per aprobar aixi que l'he deixat aixi
+			pass++;
+		}
+		else {
+			fail++;
+		}
+		c++;
+	}
+	document.write('The number of students that passed is '+ pass);
+	document.write('<br>');
+	document.write('The number of students that failed is '+ fail);
+</script>
+</body>
+</html>

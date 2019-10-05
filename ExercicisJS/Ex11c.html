@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var accnt,client,money,totalmoney;
+	totalmoney=0;
+	do{
+		accnt=prompt('Give account number: ');
+		client=prompt('Client name: ');
+		money=prompt('Account money: ');
+		accnt=parseInt(accnt);
+		money=parseInt(money);
+		document.write(client+' is the owner of '+accnt+' acount with '+money+' €');
+		document.write('<br>');
+		totalmoney=totalmoney+money;
+	}while(accnt!=0);
+	document.write('The total amount of money is: '+totalmoney);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var c, pair, odd, pr;
+	c=0;
+	pair=0;
+	odd=0;
+	while(c<5) {
+		pr=prompt('Enter a studen mark: ');
+		if (pr%2==0) {
+			pair++;
+		}
+		else {
+			odd++;
+		}
+		c++;
+		pr=0;
+	}
+	document.write('The number of pairs is '+ pair);
+	document.write('<br>');
+	document.write('The number of odds is '+ odd);
+</script>
+</body>
+</html>

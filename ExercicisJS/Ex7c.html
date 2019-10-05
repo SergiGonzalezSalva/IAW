@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var number;
+	number=prompt('Give me a number: ');
+	number=parseInt(number);
+
+	if (number<=9) {
+		document.write('The number is 1 digit long');
+	}
+	else {
+		if (number>=10 && number<=99) {
+			document.write('The number is 2 digits long');
+		}
+		else {
+		if (number>=100 && number<=999) {
+			document.write('The number is 3 digits long');
+		}
+		else {
+			document.write('This number is longer than 3 digits');
+		}
+	}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var a,b,c,avA,avB,avC,sumA,sumB,sumC;
+	avA=0;
+	avB=0;
+	avC=0;
+	sumA=0;
+	sumB=0;
+	sumC=0;
+	for(i=0;i<5;i++){
+		a=prompt('Class A mark: ');
+		a=parseInt(a);
+		sumA=sumA+a;
+	}
+	for(x=0;x<6;x++){
+		b=prompt('Class B mark: ');
+		b=parseInt(b);
+		sumB=sumB+b;
+	}
+	for(y=0;y<11;y++){
+		c=prompt('Class C mark: ');
+		c=parseInt(c);
+		sumC=sumC+c;
+	}
+	avA=sumA/5;
+	avB=sumB/6;
+	avC=sumC/11;
+	document.write('Average of A: '+avA);
+	document.write('<br>');
+	document.write('Average of B: '+avB);
+	document.write('<br>');
+	document.write('Average of C: '+avC);
+	if (avA>avB && avA>avC) {
+		document.write('<br>');
+		document.write('Class A average is better');
+	}
+	else if (avB>avA && avB>avC) {
+		document.write('<br>');
+		document.write('Class B average is better');
+	}
+	else {
+		document.write('<br>');
+		document.write('Class C average is better');
+	}
+</script>
+</body>
+</html>

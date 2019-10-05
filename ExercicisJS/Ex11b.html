@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var id,agew,agem,sex,name,men,wmn,numppl,minm,maxw,menbtw,idman,oldw;
+	minm=100;
+	maxw=0;
+	men=0;
+	wmn=0;
+	numppl=0;
+	menbtw=0;
+	do {
+		id=prompt('Give id');
+		id=parseInt(id);
+		numppl++;
+		sex=prompt('Are you a man or a woman');
+		if (sex=='man') {
+			men++;
+			agem=prompt('How old are you');
+			agem=parseInt(agem);
+			if(agem<minm){
+			minm=agem
+			idman=id;
+			}
+			if (agem>18 && agem<65) {
+				menbtw++;
+			}
+		}
+		else{
+			wmn++;
+			agew=prompt('How old are you');
+			name=prompt('Whats your name');
+			agew=parseInt(agew);
+			if (agew>maxw) {
+				maxw=agew;
+				oldw=name;
+			}
+		}
+	} while(id!=0);
+
+	document.write('There is '+numppl+' persons');
+	document.write('<br>');
+	document.write('There are '+men+' men');
+	document.write('<br>');
+	document.write('There are '+wmn+' woman');
+	document.write('<br>');
+	document.write('There are '+menbtw+' men between 18 and 65');
+	document.write('<br>');
+	document.write('The name of the oldest woman is '+oldw);
+	document.write('<br>');
+	document.write('The ID of the youngest man is: '+idman);
+
+</script>
+</body>
+</html>

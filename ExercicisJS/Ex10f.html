@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var c,height,totalh,avg;
+	c=0;
+	totalh=0;
+	avg=0;
+	while (c<5) {
+		height=prompt('Enter height: ');
+		height=parseInt(height);
+		totalh=totalh+height;
+		c++;
+	}
+	avg=totalh/c;
+	document.write('The average of those height is: '+avg);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var value,sum;
+	value=0;
+	sum=0;
+	do {
+		value=prompt('Give me a number: (9999 max)');
+		value=parseInt(value);
+		sum+=value;
+	}while(value!==9999);
+	sum=sum-9999;
+	if (sum==0) {
+		document.write('The sum of all the numbers is Zero');
+		}
+		else {
+			if (sum>0) {
+				document.write('The sum of all the numbers is Positive');
+			}
+			else{
+				if (sum<0) {
+					document.write('The sum of all the numbers is Negative');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

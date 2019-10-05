@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var sal,yr,sal2;
+	sal=prompt('Enter your salary');
+	yr=prompt('Enter the year');
+	sal=parseInt(sal);
+	yr=parseInt(yr);
+	sal2=0;
+
+	if (sal<500 && yr>=10) {
+		sal2=0.2*sal;
+		sal=sal+sal2;
+		document.write('Next years salary: '+sal);
+	}
+	else {
+		if (sal<500 && yr<10) {
+			sal2=0.05*sal;
+			sal=sal+sal2;
+			document.write('Next years salary: '+sal);
+		}
+		else{
+			if (sal>=500) {
+				document.write('Next year you will get no increment');
+			}
+		}
+	}
+</script>
+</body>
+</html>
