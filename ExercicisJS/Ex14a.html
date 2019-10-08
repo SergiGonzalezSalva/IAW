@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function Addition(value1,value2){
+		this.value1=value1;
+		this.value2=value2;
+
+			this.loadValue1=loadValue1;
+			function loadValue1(){
+				return value1;
+			}
+			this.loadValue2=loadValue2;
+			function loadValue2(){
+				return value2;
+			}
+			this.result=result;
+			function result(){
+				
+				return parseInt(value1)+parseInt(value2);
+			}		
+	}
+	var add1,n1,n2;
+	n1=prompt("Give me a number to add: ");
+	n2=prompt("Give me the second number to add: ");
+	add1=new Addition(n1,n2);
+	document.write(add1.loadValue1()+"<br>");
+	document.write(add1.loadValue2()+"<br>");
+	document.write(add1.result());
+</script>
+</body>
+</html>

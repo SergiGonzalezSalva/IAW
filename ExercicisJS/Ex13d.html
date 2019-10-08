@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function digits(x){
+		if (x<=9) {
+			return "It has 1 digit";
+		}
+		else if (x>=10 && x<=99) {
+			return "It has 2 digits";
+		}
+		else {
+			return "It has 3 digits";
+		}
+	}
+	var i;
+	i=prompt("Give number: ");
+	dg=digits(i);
+	document.write(dg);
+
+
+</script>
+</body>
+</html>

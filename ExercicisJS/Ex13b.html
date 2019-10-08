@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function ascent(x1,x2,x3) {
+		if (x1>x2 && x2>x3 && x1>x3) {
+			document.write(x1+" "+x2+" "+x3)
+		}
+		else if (x2>x1 && x2>x3 && x1>x3) {
+			document.write(x2+" "+x1+" "+x3);
+		}
+		else if (x3>x1 && x3>x2 && x2>x1) {
+			document.write(x3+" "+x2+" "+x1);
+		}
+		else if (x3>x1 && x3>x2 && x1>x2) {
+			document.write(x3+" "+x1+" "+x2);
+		}
+		else if (x1>x2 && x1>x3 && x3>x2) {
+			document.write(x1+" "+x3+" "+x2)
+		}
+		else if (x2>x1 && x2>x3 && x3>x1) {
+			document.write(x2+" "+x3+" "+x1);
+		}
+	}
+
+	var n1,n2,n3;
+	n1=prompt("Give number :");
+	n2=prompt("Give number :");
+	n3=prompt("Give number :");
+	ascent(n1,n2,n3);
+
+</script>
+</body>
+</html>

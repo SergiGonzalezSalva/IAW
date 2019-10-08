@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function Person(name,age){
+		this.name=name;
+		this.age=age;	
+	}
+
+	function Company(name,topage){
+		this.name=name;
+		this.topage=topage;
+
+		this.ablework=ablework;
+		function ablework(a){
+			if (a >= topage) {
+				return "You can work here ";
+			}
+			else {
+				return "You can't work here ";
+			}
+		}
+	}
+	var n1,n2,a1,a2;
+	n1=prompt("Nom de la primera persona: ");
+	a1=prompt("Edat de la primera persona: ");
+	n2=prompt("Nom de la segona persona: ");
+	a2=prompt("Edat de la segona persona: ");
+	p1=new Person(n1,a1);
+	p2=new Person(n2,a2);
+	c1=new Company("big",18);
+	document.write(c1.ablework(p1.age)+"<br>");
+	document.write(c1.ablework(p2.age));
+
+
+</script>
+<!-- Entiendo que tendria que fer un for per cada persona que hi ha creada i anar sumant a una variable en cas de que si fos de l'edat adequada per ensenyar-ho per pantalla, pero ara mateix no se com contar cuants de objectes Persona tenc en total, si arrib a sabrer-ho ja ho cambiare -->
+</body>
+</html>
