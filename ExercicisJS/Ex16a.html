@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function load(num8){
+		var f;
+		for(f=0;f<num8.length;f++){
+			var v;
+			v=prompt('Val pls: ');
+			num8[f]=parseInt(v);
+		}
+	}
+
+	function sum(num8){
+		var f;
+		var total=0;
+		for(f=0;f<num8.length;f++){
+			total=total+num8[f];
+		}
+		return total;
+	}
+
+	function avg(num8){
+		return sum(num8)/num8.length;
+	}
+
+	function high5(num8){
+		var f;
+		var h5=0;
+
+		for(f=0;f<num8.length;f++){
+			if (num8[f] >= 5) {
+				h5=h5+num8[f];
+			}
+		}
+		return h5;
+	}
+
+	function higher5(num8){
+		var f;
+		var hi5=0;
+
+		for(f=0;f<num8.length;f++){
+			if (num8[f] >= 5) {
+				hi5++;
+			}
+		}
+		return hi5;
+	}
+
+	var num8;
+	num8 = new Array(8);
+	load(num8);
+	document.write(sum(num8)+"<br>");
+	document.write(avg(num8)+"<br>");
+	document.write(high5(num8)+"<br>");
+	document.write(higher5(num8));
+</script>
+</body>
+</html>

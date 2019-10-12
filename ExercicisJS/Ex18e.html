@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	n="paco";
+	inv= new Array(n.length);
+	var x=0;
+	var vowel=0;
+	document.write(n.substring(0,n.length/2)+"<br>");
+	document.write(n.charAt(n.length-1)+"<br>");
+	for(f=(n.length-1);f>=0;f--){
+		inv[x]=n.charAt(f);
+		document.write(inv[x]);
+		x++;
+	}
+	document.write("<br>");
+	for(y=(inv.length-1);y>=0;y--){
+		document.write(inv[y]+" ");
+	}
+	for(z=n.length;z>=0;z--){
+	if (n.charAt(z) == "a" || n.charAt(z) == "e" || n.charAt(z) == "i" || n.charAt(z) == "o" || n.charAt(z) == "u") {
+		vowel++;
+	}
+	}
+	document.write("<br>");
+	document.write("There are "+vowel+" vowels in that word");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	d = new Date();
+	x=prompt("What month it is (number): ");
+	x=parseInt(x);
+	d.setMonth(x);
+	if (d.getMonth() <= 2) {
+		document.write("The first term of "+d.getFullYear()+" are : January, February and March");
+	}
+	else if (d.getMonth() >= 3 && d.getMonth() <= 5) {
+		document.write("The second term of "+d.getFullYear()+" are: April, May and June");
+	}
+	else if (d.getMonth() >= 6 && d.getMonth() <= 8) {
+		document.write("The third term of "+d.getFullYear()+" are: July, August and September");
+	}
+	else if (d.getMonth() >= 9 && d.getMonth() <= 11){
+		document.write("The forth term of "+d.getFullYear()+" are: October, November and December");
+	}
+</script>
+</body>
+</html>

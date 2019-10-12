@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	var n=prompt("Dame un palindromo");
+	var x=0,z=0,c=0,m=0;
+	inv = new Array(n.length);
+
+	for(f=(n.length-1);f>=0;f--){
+		inv[x]=n.charAt(f);
+		x++;
+	}
+	for(y=n.length;y>=0;y--){
+		if (n.charAt(z) == inv[c]) {
+			z++;
+			c++;
+		}
+		else {
+			z++;
+			c++;
+			m++;
+		}
+	}
+	if (m>1) {
+		document.write(n+" no es un palindromo");
+	} else {
+		document.write(n+" es un palindromo");
+	}
+</script>
+</body>
+</html>
