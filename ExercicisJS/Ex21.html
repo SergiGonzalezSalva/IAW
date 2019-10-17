@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function comp(){
+	x=document.getElementById("big").value;
+	y=document.getElementById("big2").value;
+	if(x == y){
+		alert("Passwords are equal");	
+		}
+		else{
+			alert("Passwords are NOT equal");
+		}
+	}
+</script>
+<form>
+Enter a password: <input type="password" id="big">
+<br>
+Repeat the password: <input type="password" id="big2">
+<br>
+<input type="button" value="Check" onclick="comp()">
+</form>
+</body>
+</html>

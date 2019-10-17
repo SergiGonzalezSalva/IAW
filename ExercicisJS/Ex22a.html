@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function showprice() {
+		var x = document.getElementById("select");
+		document.getElementById("price").value=x.options[x.selectedIndex].value;
+	}
+</script>
+<form>
+	<select id="select" onChange="showprice()">
+		<option value="5">Pepperoni</option>
+		<option value="10">4 formaggi</option>
+		<option value="20">Proscciuto</option>
+	</select>
+	<br>
+	Price: <input type="text" id="price">
+</form>
+</body>
+</html>

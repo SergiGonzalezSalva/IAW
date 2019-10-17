@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function checkage(){
+		
+		if (document.getElementById("radio1").checked && document.getElementById("radio2").checked)  {
+			return alert("Check only 1 option please");
+		}
+		if (document.getElementById("radio1").checked) {
+			return alert("You can enter this website");
+		}
+		if (document.getElementById("radio2").checked) {
+			return alert("You can't enter this website");
+		}
+	}
+</script>
+<form>
+ <input type="radio" id="radio1">Older than 18
+ <br>
+ <input type="radio" id="radio2">Younger than 18
+ <br>
+ <input type="button" id="agecheck" onclick="checkage()" value="Enter page">
+</body>
+</html>

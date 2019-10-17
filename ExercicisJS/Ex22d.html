@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function calcmark() {
+		var x = document.getElementById("p1");
+		var y = document.getElementById("p2");
+		var z = document.getElementById("p3");
+		var w = document.getElementById("p4");
+		var total=0;
+
+		if (x.options[x.selectedIndex].value == "a") {
+			total++;
+		}
+		if (y.options[y.selectedIndex].value == "a") {
+			total++;
+		}
+		if (z.options[z.selectedIndex].value == "b") {
+			total++;
+		}
+		if (w.options[w.selectedIndex].value == "b") {
+			total++;
+		}
+		return alert(total);
+	}
+</script>
+<form>
+	Pregunta 1: Despues de lunes viene:
+	<select id="p1">
+		<option value="a">Martes</option>
+		<option value="b">Antonio</option>
+		<option value="c">Madrid</option>
+		<option value="d">Jueves</option>
+	</select>
+	<br>
+	Pregunta 2: Gato en ingles:
+	<select id="p2">
+		<option value="a">Cat</option>
+		<option value="b">Dog</option>
+		<option value="c">Martes</option>
+		<option value="d">Dinosaur</option>
+	</select>
+	<br>
+	Pregunta 3: 2+4
+	<select id="p3">
+		<option value="a">Cat</option>
+		<option value="b">6</option>
+		<option value="c">12000</option>
+		<option value="d">7</option>
+	</select>
+	<br>
+	Pregunta 4: Capital España
+	<select id="p4">
+		<option value="a">6</option>
+		<option value="b">Madrid</option>
+		<option value="c">Londres</option>
+		<option value="d">Sevilla</option>
+	</select>
+	<br><br>
+	<input type="button" value="Calculate" onclick="calcmark()">
+</form>
+</body>
+</html>

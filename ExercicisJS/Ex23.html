@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function showjob(){
+		var check=" ";
+		 if (document.getElementById('checkbox1').checked) {
+ 			check=check+"Football ";
+ 		}
+ 		if (document.getElementById('checkbox2').checked) {
+ 			check=check+"Tenis ";
+ 		}
+ 		if (document.getElementById('checkbox3').checked) {
+ 			check=check+"Karate ";
+ 		}
+ 		return alert("Selected sports "+check);
+	}
+</script>
+
+<form>
+	<input type="checkbox" id="checkbox1">Football
+	<br>
+	<input type="checkbox" id="checkbox2"> Tenis
+	<br>
+	<input type="checkbox" id="checkbox3"> Karate
+	<br>
+	<input type="button" id="check" value="Check" onclick="showjob()">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function totalprice() {
+		var x = document.getElementById("cpu");
+		var y = document.getElementById("monitor");
+		var z = document.getElementById("harddisk");
+		x=parseInt(x.options[x.selectedIndex].value);
+		y=parseInt(y.options[y.selectedIndex].value);
+		z=parseInt(z.options[z.selectedIndex].value);
+		var total=x+y+z;
+		document.getElementById("price").value=total;
+	}
+</script>
+<form>
+	<select id="cpu">
+		<option value="400">Intel i3</option>
+		<option value="600">Intel i5</option>
+		<option value="800">Intel i7</option>
+	</select>
+	<br>
+		<select id="monitor">
+		<option value="250">Samsung 20'</option>
+		<option value="350">Samsung 22'</option>
+		<option value="550">Samsung 26'</option>
+	</select>
+	<br>
+		<select id="harddisk">
+		<option value="300">500GB</option>
+		<option value="440">1TB</option>
+		<option value="500">3TB</option>
+	</select>
+	<br>
+	<input type="button" value="Calculate" onclick="totalprice()">
+	<input type="text" id="price">
+</form>
+</body>
+</html>

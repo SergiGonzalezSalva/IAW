@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function finalcost() {
+		var x = document.getElementById("select");
+		var y = document.getElementById("pizzas");
+		x=parseInt(x.options[x.selectedIndex].value);
+		y=parseInt(y.value);
+		
+	}
+</script>
+<form>
+	<select id="select">
+		<option value="5">Pepperoni</option>
+		<option value="10">4 formaggi</option>
+		<option value="20">Proscciuto</option>
+	</select>
+	<br>
+	<input type="text" id="pizzas">
+	<br>
+	<input type="button" value="Calculate" onclick="finalcost()">
+</form>
+</body>
+</html>
