@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+	function randompage() {
+		var x = Math.random()*2;
+		if (Math.round(x)==0) {
+			window.location='http://www.google.com';
+		} else if (Math.round(x)==1) {
+			window.location='http://www.yahoo.com';
+		} else if (Math.round(x)==2){
+			window.location='http://www.bing.com';
+		}
+	}
+</script>
+<a href="javascript:randompage()"> Link </a>
+
+</body>
+</html>

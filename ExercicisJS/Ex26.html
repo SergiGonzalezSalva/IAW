@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">	
+	function passcheck(){
+		var check = new RegExp(/\w{6,19}/);
+		var pass = document.getElementById("pass").value;
+		if (check.test(pass)) {
+			return alert("Congratz on making your account");
+		}
+		return alert("Password is longer than 20 characters or shorter than 7");
+	}
+
+</script>
+<form>
+Username: <input type="text" id="username">
+<br><br>
+Password: <input type="Password" id="pass">
+<br><br>
+<input type="button" onclick="passcheck()" value="Create account">
+</form>
+</body>
+</html>
