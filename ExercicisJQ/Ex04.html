@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+        	$("table#table1 tr").click(function(){
+            	$(this).css("background-color","red");
+            });
+            $("table#table2 td").click(function(){
+            	$(this).css("font-size","20px");
+            });
+        });
+    </script>
+   	<table border=1 id="table1">
+    	<tr>
+    		<td>Hola</td>
+    	</tr>
+    	<tr> 
+       		<td>Buenas</td>
+     	</tr>
+     	<tr>
+     		<td>Tardes</td>
+     	</tr>
+    </table>
+    <br>
+    <table border=1 id="table2">
+    	<tr>
+    		<td>Hello</td>
+    	</tr>
+    	<tr> 
+       		<td>Good</td>
+     	</tr>
+     	<tr>
+     		<td>Afternoon</td>
+     	</tr>
+    </table>
+</body>
+</html>

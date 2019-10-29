@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Activitat 1</title>
+            <script src="..\jquery-3.4.1.js"></script>
+        </head>
+        <body>
+            <script>
+                $(document).ready(function(){
+                    $("#tr1").click(function(){
+                        $(this).css("background-color","red");
+                    });
+                    $("#tr2").click(function(){
+                        $(this).css("background-color","yellow");
+                    });
+                });
+            </script>
+            <table>
+                <tr id="tr1">
+                    <td>Hola</td>
+                </tr>
+                <tr id="tr2"> 
+                    <td>Buenas</td>
+                </tr>
+            </table>
+        </body>
+</html>
