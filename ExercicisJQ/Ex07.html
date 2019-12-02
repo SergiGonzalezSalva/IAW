@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+</head>
+<body>
+    <a id="canvi" href="">Link</a>
+    <br>
+    <button link="https://google.com">Google</button>
+    <button link="https://youtube.com">Youtube</button>
+    <button link="https://twitter.com">Twitter</button>
+        <script>
+        $("button").click(function () { 
+        $("#canvi").attr("href",$(this).attr("link"));
+        });
+    </script>
+</body>
+</html>

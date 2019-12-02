@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+</head>
+<body>
+    <input type="text" placeholder="Hola">
+    <input type="text" placeholder="Hola">
+<script>
+    $("input[type=text]").blur(function () {
+        if ($(this).val() === "")
+        alert("Vacio no porfavor");
+    });
+</script>
+</body>
+</html>

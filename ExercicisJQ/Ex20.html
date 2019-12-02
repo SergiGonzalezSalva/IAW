@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+<style>
+    #div2 {
+        display: none;
+    }
+</style>
+</head>
+<body>
+	<div id="div1">Adiooooooosss</div>
+	<div id="div2">Holaaaaaaaaa</div>
+<script>
+    $("#div1").click(function () {
+        $(this).fadeOut(1000, function() {
+            $("#div2").fadeIn(1000);
+        });
+    });
+</script>
+</body>
+</html>

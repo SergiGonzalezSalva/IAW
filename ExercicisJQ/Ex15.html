@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+<style>
+        #div {
+            width: 800px;
+            height: 70px;
+            border: 2px solid aqua;
+        }
+        .click {
+            width: 250px !important;
+            height: 250px !important;
+        }
+</style>
+</head>
+<body>
+<body>
+<div id="div"></div>
+<script>
+    $("#div").dblclick(function () {
+        $(this).toggleClass("click");
+    });
+</script>
+</body>
+</html>

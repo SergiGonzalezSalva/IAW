@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+</head>
+<body>
+	<a href="http://iesmanacor.cat">IES Manacor</a>
+    <a href="https://google.es">Google</a>
+    <a href="https://youtube.com">YouTube</a>
+    <script>
+    $("a").each(function () {
+        if ($(this).attr('href').indexOf('.es') > -1)
+            $(this).css("background", "#ffff99");
+    });
+</script>
+</body>
+</html>

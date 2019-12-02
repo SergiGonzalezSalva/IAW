@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+</head>
+<body>
+    <button>Button 1</button>
+    <button>Button 2</button> 
+<script>
+    $("button").mouseup(function () {
+            $(this).css({"background": "#ddd", "border-color": "#ddd"})
+        })
+    $("button").mousedown(function () {
+        $(this).css({"background": "aqua", "border-color": "aqua"})
+        });
+</script>
+</body>
+</html>

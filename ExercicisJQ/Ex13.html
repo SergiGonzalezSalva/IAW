@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="..\jquery-3.4.1.js"></script>
+<style>
+     #div {
+         width: 200px;
+         height: 200px;
+         border: 2px solid aqua;
+    }
+</style>
+</head>
+<body>
+    <p id="text">P</p>
+    <div id="div"></div>
+<script>
+    $(document).mousemove((e) => {
+        $("#text").text(
+            e.target.id == "div" ?
+            "x: " + e.clientX +
+            "\t" +
+            "y: " + e.clientY :
+            "Mouse outside div"
+        );
+    });
+</script>
+</body>
+</html>
