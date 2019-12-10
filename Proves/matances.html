@@ -33,6 +33,7 @@ KG: <input type="number" id="kg"/>
 <button id="b2">Calcular pes</button>
 <button id="b3">Veure peses</button>
 <button id="b4">Compensar pes</button>
+<button id="b5">Ordenar per pes ASC</button>
 <div >
 	<table border="1">
 		<tbody id="div1"></tbody>
@@ -140,6 +141,19 @@ $(document).ready(function(){
 
 		$("#b4").click(function(){
 			compensar();
+		});
+
+		$("#b5").click(function(){
+			
+			sobrassada.sort(function (a,b){
+				return a.kg - b.kg;
+			});
+
+			botifarrons.sort(function (a,b){
+				return a.kg - b.kg;
+			});
+
+			printPeses();
 		});
 
 });
