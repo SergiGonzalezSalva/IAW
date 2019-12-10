@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function Tros(tros,tipus,kg){
+			this.tros = tros;
+			this.tipus = tipus;
+			this.kg = kg;
+
+			this.print = print;
+			function print(){
+				return this.tros+" - "+this.tipus+" - "+this.kg;
+			}
+		}
+
+	</script>
+<h2>Matances</h2>
+<hr/>
+Tros: <input type="text" id="tros"/> <br>
+Classe: <select id="tipus">
+	<option value="sobrassada">Sobrasada</option>
+	<option value="botifarrons">Botifarrons</option>
+	</select>
+<br>
+KG: <input type="number" id="kg"/>
+<br>
+<br>
+<button id="b1">Afegir Tros</button>
+<button id="b2">Calcular pes</button>
+<button id="b3">Veure peses</button>
+<button id="b4">Compensar pes</button>
+<div >
+	<table border="1">
+		<tbody id="div1"></tbody>
+	</table>
+</div>
+<div id="div2">
+</div>
+<script>
+	var sobrassada = [];
+	var botifarrons = [];
+	$("table").hide();
+
+	sobrassada.push(new Tros("fetge","sobrassada","2"));
+	botifarrons.push(new Tros("nas","botifarrons","1"));
+
+
+$(document).ready(function(){
+		
+
+		function crearTros(){
+			var t = $("#tros").val();
+			var ti = $("#tipus").val();
+			var k = $("#kg").val();
+
+			var tros = new Tros(t,ti,k);
+
+			return tros;
+		}
+
+		function printPeses(){
+			$("#div1").empty();
+			for (var i=0; i < sobrassada.length; i++) {
+				$("table").show();
+				 var info = sobrassada[i].print();
+				 var newtr = $("<tr>");
+				 var newtd = $("<td>").text(info);
+				 $("#div1").append(newtr).append(newtd);
+
+				 if (sobrassada[i].kg > 5) {
+				 	newtd.css("background-color","red");
+				 }	
+			}
+			$("#div2").empty();
+			for (var i=0; i < botifarrons.length; i++) {
+				 var info = botifarrons[i].print();
+				 
+				 
+				 if (botifarrons[i].kg < 5) {
+				 	var newli = $("<li>").html("<b>"+botifarrons[i].print()+"</b>");
+				 }
+
+				 else {
+				 	var newli = $("<li>").html(botifarrons[i].print());
+				 }	
+				 $("#div2").append(newli);
+			}
+		}
+
+		function pestotal(){
+			var total = 0;
+			for(var i=0; i<sobrassada.length; i++){
+				total += parseInt(sobrassada[i].kg);
+			}
+
+			for(var i=0; i<botifarrons.length; i++){
+				total += parseInt(botifarrons[i].kg);
+			}
+
+			return total;
+		}
+
+		function compensar(){
+			var total = 0;
+			for(var i=0; i<sobrassada.length; i++){
+				sobrassada[i].kg = parseInt(sobrassada[i].kg)-0.5;
+
+			}
+
+			for(var i=0; i<botifarrons.length; i++){
+				botifarrons[i].kg = parseInt(botifarrons[i].kg)-0.5;
+			}
+
+			return total;
+		}
+
+		$("#b1").click(function(){
+			var p = crearTros();
+			if ($("#tipus").val() == "sobrassada") {
+				sobrassada.push(p);
+			}
+			else{
+				botifarrons.push(p);
+			}
+		});
+
+		$("#b2").click(function(){
+			var t = pestotal();
+			alert("TOTAL DE KG: "+t)
+		});
+
+		$("#b3").click(function(){
+			printPeses();
+		});
+
+
+		$("#b4").click(function(){
+			compensar();
+		});
+
+});
+</script>
+</body>
+</html>
